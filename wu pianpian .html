@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吴翩翩 · Booster Robotics 海外售前</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --t:#00A99D;--td:#007A73;--txd:#005A55;--tl:#E8F8F7;--tl2:#D0F0EE;
+  --w:#E85A2A;--wl:#FFF2EE;
+  --gd:#1C1C1C;--gm:#5A5A5A;--gl:#F4F4F4;--gl2:#EBEBEB;
+  --white:#fff;--border:rgba(0,169,157,0.12);
+  --r:10px;--r2:6px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:#F9F9F9;color:var(--gd);line-height:1.6;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;height:56px;
+  background:rgba(249,249,249,0.94);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--td);letter-spacing:.06em;font-weight:500}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13px;color:var(--gm);text-decoration:none;font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--t)}
+.nav-btn{
+  background:var(--td);color:#fff !important;
+  padding:7px 16px;border-radius:var(--r2);
+  font-size:12px !important;font-weight:600 !important;
+  transition:background .15s !important;letter-spacing:.01em;
+}
+.nav-btn:hover{background:var(--txd) !important}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:88px 48px 72px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#F9F9F9 60%,var(--tl) 100%);
+}
+.hero-bg{
+  position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 600px 500px at 80% 20%,rgba(0,169,157,.06) 0%,transparent 70%),
+    radial-gradient(ellipse 400px 300px at 10% 80%,rgba(232,90,42,.04) 0%,transparent 60%);
+}
+.hero-inner{max-width:860px;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--t);letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:22px;
+}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--t)}
+h1{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(44px,6.5vw,76px);line-height:1.08;
+  color:var(--gd);margin-bottom:24px;letter-spacing:-.02em;
+}
+h1 em{font-style:italic;color:var(--t)}
+.hero-sub{
+  font-size:17px;color:var(--gm);max-width:540px;
+  line-height:1.72;margin-bottom:36px;font-weight:400;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:12px 24px;border-radius:var(--r2);
+  font-size:14px;font-weight:600;text-decoration:none;
+  transition:all .18s;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+}
+.btn-p{background:var(--td);color:#fff}
+.btn-p:hover{background:var(--txd);transform:translateY(-1px)}
+.btn-s{background:transparent;color:var(--td);border:1.5px solid var(--td)}
+.btn-s:hover{background:var(--tl)}
+.hero-stat{
+  display:flex;gap:40px;margin-top:48px;padding-top:36px;
+  border-top:1px solid var(--gl2);flex-wrap:wrap;
+}
+.stat-item{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-family:'DM Serif Display',serif;font-size:28px;color:var(--td);line-height:1}
+.stat-label{font-size:12px;color:var(--gm);font-weight:500}
+
+/* ── SECTIONS ── */
+section{padding:80px 48px}
+.sec-inner{max-width:860px;margin:0 auto}
+.sec-label{
+  display:flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--t);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;
+}
+.sec-label::before{content:'';width:18px;height:1px;background:var(--t)}
+h2{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(26px,3.8vw,38px);line-height:1.18;
+  margin-bottom:14px;letter-spacing:-.015em;
+}
+.sec-desc{font-size:15px;color:var(--gm);max-width:580px;line-height:1.72;margin-bottom:44px}
+
+/* ── CALLOUT BOXES ── */
+.callout{border-radius:var(--r);padding:22px 26px;margin-bottom:16px}
+.callout-teal{background:var(--tl);border-left:3px solid var(--t)}
+.callout-warn{background:var(--wl);border-left:3px solid var(--w)}
+.callout-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;
+}
+.callout-teal .callout-label{color:var(--td)}
+.callout-warn .callout-label{color:var(--w)}
+.callout p{font-size:14px;line-height:1.76;color:var(--gd)}
+.callout strong{color:var(--td)}
+.callout-warn strong{color:var(--w)}
+
+/* ── FLYWHEEL ── */
+.fw-section{background:var(--gd);padding:80px 48px}
+.fw-section h2{color:#fff}
+.fw-section .sec-desc{color:rgba(255,255,255,.5)}
+.fw-section .sec-label{color:var(--t)}
+.fw-section .sec-label::before{background:var(--t)}
+.fw-wrap{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:0;margin:44px 0 32px;
+}
+.fw-node{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(0,169,157,.25);border-radius:var(--r);
+  padding:20px 16px;text-align:center;width:148px;min-height:108px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:all .25s;cursor:default;
+}
+.fw-node:hover{background:rgba(0,169,157,.14);border-color:var(--t);transform:scale(1.05)}
+.fw-node.active{background:rgba(0,169,157,.16);border-color:var(--t)}
+.fw-icon{font-size:26px;margin-bottom:7px}
+.fw-label{font-size:11px;color:#fff;font-weight:500;line-height:1.4}
+.fw-arr{color:var(--t);font-size:18px;padding:0 6px;opacity:.6;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.9}}
+.fw-note{font-size:13px;color:rgba(255,255,255,.45);text-align:center;max-width:480px;margin:0 auto;line-height:1.7}
+.fw-note strong{color:var(--t)}
+
+/* ── RISK GRID ── */
+.risk-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+.risk-card{
+  background:#fff;border-radius:var(--r);
+  border:1px solid #E8E8E8;padding:22px;
+  transition:all .2s;position:relative;overflow:hidden;
+}
+.risk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--w)}
+.risk-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.07);transform:translateY(-2px)}
+.risk-card.full{grid-column:1/-1;background:var(--wl);border-color:rgba(232,90,42,.2)}
+.risk-num{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--w);letter-spacing:.1em;margin-bottom:7px;
+}
+.risk-title{font-size:13px;font-weight:600;margin-bottom:10px;color:var(--gd)}
+.risk-body{font-size:12.5px;color:var(--gm);line-height:1.65}
+.risk-body em{color:var(--td);font-style:normal;font-weight:600}
+
+/* ── 60 DAYS ── */
+.days-section{background:#fff}
+.days-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:40px;border-radius:var(--r);overflow:hidden;border:1px solid #E8E8E8}
+.day-col{background:#fff}
+.day-head{
+  padding:18px 22px;font-size:13px;font-weight:600;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+.day-head.c1{background:var(--t)}
+.day-head.c2{background:var(--td)}
+.day-head .period{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  opacity:.75;margin-bottom:3px;letter-spacing:.05em;
+}
+.day-row{
+  padding:13px 22px;border-bottom:1px solid #F0F0F0;
+  font-size:12.5px;display:flex;gap:10px;align-items:baseline;
+}
+.day-row:last-child{border-bottom:none}
+.day-row.highlight{background:var(--tl);font-weight:600;color:var(--td)}
+.day-tag{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--td);white-space:nowrap;min-width:54px;
+  font-weight:500;margin-top:1px;
+}
+.day-row.highlight .day-tag{color:var(--txd)}
+.day-text{color:var(--gd);line-height:1.5}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+.skill-card{background:#fff;border-radius:var(--r);border:1px solid #E8E8E8;overflow:hidden}
+.skill-head{
+  padding:13px 18px;font-size:13px;font-weight:600;color:var(--td);
+  background:var(--gl);border-bottom:1px solid #E8E8E8;
+}
+.skill-body{display:grid;grid-template-columns:1fr 1fr}
+.skill-col{padding:14px 18px;font-size:12px;line-height:1.65;color:var(--gm)}
+.skill-col:first-child{border-right:1px solid #E8E8E8}
+.skill-col:last-child{background:var(--tl)}
+.skill-col-label{
+  font-size:10px;font-weight:600;color:var(--gm);
+  text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;
+}
+.skill-col:last-child .skill-col-label{color:var(--td)}
+.skill-col p{color:var(--gd)}
+
+/* ── FOOTER ── */
+.foot{background:var(--gd);padding:72px 48px;text-align:center}
+.foot h2{font-family:'DM Serif Display',serif;font-size:34px;color:#fff;margin-bottom:14px}
+.foot-sub{color:rgba(255,255,255,.45);font-size:14px;line-height:1.8;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.foot-contact{
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+  color:var(--t);margin-bottom:30px;letter-spacing:.04em;
+}
+.foot-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:var(--t);color:#fff}
+.btn-dark:hover{background:var(--td)}
+
+/* ── FADE ── */
+.fu{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.fu.in{opacity:1;transform:none}
+
+/* ── MOBILE ── */
+@media(max-width:720px){
+  nav{padding:0 20px}
+  .nav-links a:not(.nav-btn){display:none}
+  section,.fw-section,.days-section,.foot{padding:56px 20px}
+  .hero{padding:88px 20px 60px}
+  .risk-wrap{grid-template-columns:1fr}
+  .risk-card.full{grid-column:1}
+  .days-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .fw-wrap{flex-direction:column}
+  .fw-arr{transform:rotate(90deg)}
+  .hero-stat{gap:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">WU PIANPIAN · 吴翩翩</div>
+  <div class="nav-links">
+    <a href="#observation">核心判断</a>
+    <a href="#flywheel">生态</a>
+    <a href="#risks">风险</a>
+    <a href="#plan">60天</a>
+    <a href="#contact" class="nav-btn">下载 PDF ↓</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Booster Robotics · 海外售前解决方案</div>
+    <h1>让开发者<br>真正<em>跑起来</em></h1>
+    <p class="hero-sub">
+      海外售前卖的不是机器人参数，而是「客户6个月后仍在持续使用」的确定性。
+      我在星星充电四年只做了一件事：让复杂技术产品在海外ToB客户手里真正跑起来。
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-p">↓ 下载完整方案 PDF</a>
+      <a href="#observation" class="btn btn-s">查看核心判断 →</a>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-item"><div class="stat-num">4年</div><div class="stat-label">海外ToB售前经验</div></div>
+      <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">次海外客户全英文演示</div></div>
+      <div class="stat-item"><div class="stat-num">80%</div><div class="stat-label">渠道培训内容效率提升</div></div>
+      <div class="stat-item"><div class="stat-num">59%</div><div class="stat-label">客户NPS年度提升</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBSERVATION -->
+<section id="observation" style="background:#fff">
+  <div class="sec-inner">
+    <div class="sec-label fu">我的判断</div>
+    <h2 class="fu">两个值得认真对待的观察</h2>
+    <p class="sec-desc fu">不是吹公司，而是对行业和这个岗位有自己的看法。</p>
+
+    <div class="callout callout-teal fu">
+      <div class="callout-label">对当前开发者市场的感受</div>
+      <p>很多人形机器人公司其实还没真正准备好做开发者生态。
+      SDK不稳定、仿真和真机割裂、onboarding成本过高——
+      导致很多开发者买了机器人，三个月后就放到实验室角落吃灰了。<br><br>
+      很多公司以为做开发者生态就是搞社区。但开发者真正留下来，
+      不是因为社区热闹，而是因为他真的能在这个平台上<strong>持续做实验、出结果</strong>。
+      未来真正能活下来的，不一定是硬件参数最强的，而是最先让开发者持续用起来的公司。</p>
+    </div>
+
+    <div class="callout callout-warn fu">
+      <div class="callout-label">这个岗位真正难的地方</div>
+      <p>Booster当前真正的挑战不是机器人能不能动，而是如何在
+      <strong>快速交付和开发者体验之间找到平衡</strong>——
+      开发者想要更开放更自由，硬件又需要稳定和可控。
+      海外售前会长期处于这个张力中间。<br><br>
+      我没有机器人行业背景，所以我很清楚：
+      <strong>入职第一件事不是输出观点，而是把开发环境搭起来，自己先踩一遍坑。</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- FLYWHEEL -->
+<section id="flywheel" class="fw-section">
+  <div class="sec-inner">
+    <div class="sec-label fu">开发者生态</div>
+    <h2 class="fu">这个循环不会自动转</h2>
+    <p class="sec-desc fu">开发者留下来，不是因为社区热闹——而是因为他能持续做实验、出结果。需要有人把第一周的门槛降到足够低。</p>
+
+    <div class="fw-wrap fu">
+      <div class="fw-node"><div class="fw-icon">🌍</div><div class="fw-label">海外开发者<br>买 T1</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-node active"><div class="fw-icon">🚀</div><div class="fw-label">售前降低<br>第一周门槛</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-node"><div class="fw-icon">🔬</div><div class="fw-label">产生真实<br>失败数据</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-node"><div class="fw-icon">⚙️</div><div class="fw-label">反哺运控<br>算法迭代</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-node"><div class="fw-icon">📈</div><div class="fw-label">T1 更好用<br>吸引更多人</div></div>
+    </div>
+
+    <p class="fw-note fu">
+      真正的具身智能不会诞生在实验室 Demo 里，<br>
+      而会诞生在<strong>全球开发者每天把机器人「玩坏」的过程中</strong>。
+    </p>
+  </div>
+</section>
+
+<!-- RISKS -->
+<section id="risks" style="background:#F9F9F9">
+  <div class="sec-inner">
+    <div class="sec-label fu">现场风险意识</div>
+    <h2 class="fu">硬件交付之后，挑战才真正开始</h2>
+    <p class="sec-desc fu">机器人售前和 SaaS 售前最大的区别：交付之后客户会遇到什么，你得提前知道。</p>
+
+    <div class="risk-wrap fu">
+      <div class="risk-card full">
+        <div class="risk-num">真实踩坑 · 从复杂硬件+SaaS 交付经验迁移</div>
+        <div class="risk-title">两个我亲历的现场事故</div>
+        <div class="risk-body">
+          <strong style="color:var(--w)">踩坑1：海外 Demo，平台数据和现场设备数据对不上</strong><br>
+          客户现场第一反应是「你们平台是不是不可信？」那一刻如果解释不清楚，后面所有功能演示都会失去信任。
+          我们当场重新梳理数据链路——最后发现是网络延迟导致的同步偏差，不是系统 Bug。
+          出具了数据一致性说明，才稳住了局面。<br>
+          <em>→ 客户质疑的不是数据差异本身，而是你在他面前慌没慌。</em><br><br>
+          <strong style="color:var(--w)">踩坑2：香港客户验收，按自己标准写的材料被全部退回</strong><br>
+          客户要求按照内部框架逐项提交——安全操作规范要有风险等级标注，责任边界条款缺一不可，
+          格式不对直接退回重做，影响付款节点。重新按对方模板改了一遍，最终通过。<br>
+          <em>→ 售前必须提前问清楚客户的验收框架，不能用自己觉得完整的标准去交付。</em>
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">卡点 01</div>
+        <div class="risk-title">Demo 成功，客户回去跑不起来</div>
+        <div class="risk-body">
+          很多开发者不是不会写算法，而是环境配不好——版本冲突，第一步就卡死。
+          客户实验室能跑仿真，连上真机后数据延迟飙升，排查半天才发现是网络配置问题。<br><br>
+          <em>解法：</em> 标准 Docker 镜像锁死依赖版本，交付前远程确认客户网络环境。
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">卡点 02</div>
+        <div class="risk-title">仿真跑通，真机效果不稳定</div>
+        <div class="risk-body">
+          仿真里地面是完美平面，真实实验室地板有接缝和坡度。算法在仿真稳定，上真机后关节抖动。
+          很多客户第一次摔机，以为坏了，其实只是急停状态没有解除。<br><br>
+          <em>解法：</em> 提供仿真到真机参数对照说明 + 首月每周技术答疑。
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">卡点 03</div>
+        <div class="risk-title">没有机器人运维经验</div>
+        <div class="risk-body">
+          真正负责跑实验的往往是博士生，不是教授。博士生不知道摔倒后如何安全重启，
+          关节过热停机以为坏了——问题积压后客户失去耐心。<br><br>
+          <em>解法：</em> 标准运维手册 + 交付后 30 天 dedicated onboarding 支持。
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">卡点 04</div>
+        <div class="risk-title">海外验收标准比预期严苛</div>
+        <div class="risk-body">
+          德国、日本客户要求文档按对方内部框架逐项提交，格式不对就退回，
+          安全认证和责任边界条款缺一不可，验收周期被拉长影响付款节点。<br><br>
+          <em>解法：</em> 售前阶段主动要客户验收框架，建立覆盖主要市场的标准模板库。
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="risk-num">卡点 05</div>
+        <div class="risk-title">海外交付后支持断层</div>
+        <div class="risk-body">
+          时区差异——客户在德国上班时北京已是深夜。硬件故障备件无法快速到位。
+          没有本地伙伴，客户感觉买了「孤儿产品」。<br><br>
+          <em>解法：</em> 本地合作伙伴网络 + SLA 写进合同 + issue tracker 公开透明。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 60 DAYS -->
+<section id="plan" class="days-section">
+  <div class="sec-inner">
+    <div class="sec-label fu">入职计划</div>
+    <h2 class="fu">60天，学习和产出从第一天并行</h2>
+    <p class="sec-desc fu">没那么多时间慢慢学。入职第一天搭环境，第一周访谈客户，边学边出东西。</p>
+
+    <div class="days-grid fu">
+      <div class="day-col">
+        <div class="day-head c1">
+          <div class="period">DAY 01 – 30</div>
+          理解 · 搭建 · 同步产出
+        </div>
+        <div class="day-row"><div class="day-tag">第1天</div><div class="day-text">本地搭好 ROS2+SDK 环境，跑通官方 Demo</div></div>
+        <div class="day-row"><div class="day-tag">第1周</div><div class="day-text">故意制造常见错误（版本冲突/连接失败），自己先踩一遍</div></div>
+        <div class="day-row"><div class="day-tag">第1-2周</div><div class="day-text">访谈已有海外客户 3 家，整理最常卡的 3 个问题</div></div>
+        <div class="day-row"><div class="day-tag">第2周</div><div class="day-text">产出第一版内部客户 FAQ，供销售和研发使用</div></div>
+        <div class="day-row"><div class="day-tag">第3周</div><div class="day-text">深度对接研发/产品，搞清楚 Roadmap 和当前最大瓶颈</div></div>
+        <div class="day-row"><div class="day-tag">第3-4周</div><div class="day-text">完成主要竞品调研，输出竞品对比手册</div></div>
+        <div class="day-row"><div class="day-tag">第4周</div><div class="day-text">产出第一版英文 Quick Start 文档（草稿）</div></div>
+      </div>
+
+      <div class="day-col">
+        <div class="day-head c2">
+          <div class="period">DAY 31 – 60</div>
+          体系化 · 推进 · 交付结果
+        </div>
+        <div class="day-row"><div class="day-tag">第5周</div><div class="day-text">完善 Quick Start，发给 1-2 个海外客户验证可用性</div></div>
+        <div class="day-row"><div class="day-tag">第5-6周</div><div class="day-text">搭建标准 Demo 流程，含机器人现场风险预案</div></div>
+        <div class="day-row"><div class="day-tag">第6周</div><div class="day-text">产出开发者 onboarding 材料 · 运维异常 FAQ</div></div>
+        <div class="day-row"><div class="day-tag">第7周</div><div class="day-text">梳理现有海外渠道伙伴，制定第一批培训计划</div></div>
+        <div class="day-row"><div class="day-tag">第7-8周</div><div class="day-text">整理 2-3 个海外开发者成功案例，输出方案模板</div></div>
+        <div class="day-row"><div class="day-tag">第8周</div><div class="day-text">输出「开发者常见问题」报告给研发，含优先级判断</div></div>
+        <div class="day-row highlight"><div class="day-tag">第60天</div><div class="day-text">交付第一版海外开发者支持手册：onboarding + 技术支持 + 常见问题</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section style="background:#F9F9F9">
+  <div class="sec-inner">
+    <div class="sec-label fu">可迁移能力</div>
+    <h2 class="fu">没有机器人背景，但有完整的复杂技术 ToB 售前经验</h2>
+    <p class="sec-desc fu">充电桩是硬件+SaaS+App 的集成系统，和人形机器人的底层逻辑高度一致——都需要把技术翻译成客户能做决策的语言。</p>
+
+    <div class="skills-grid fu">
+      <div class="skill-card">
+        <div class="skill-head">海外大客户落地</div>
+        <div class="skill-body">
+          <div class="skill-col">
+            <div class="skill-col-label">过去做过</div>
+            <p>新加坡 LTA（ToG）、香港华润（ToB）<br>独立输出全英文技术方案 · 推动签约<br>客户满意度 +30%</p>
+          </div>
+          <div class="skill-col">
+            <div class="skill-col-label">机器人售前迁移</div>
+            <p>硬件+SaaS+API 联合交付<br>→ 与「本体+运控+开发工具」逻辑一致<br>海外客户沟通 · 直接复用</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">渠道培训与验收管理</div>
+        <div class="skill-body">
+          <div class="skill-col">
+            <div class="skill-col-label">过去做过</div>
+            <p>0-1 搭建标准化培训课程<br>被客户退回后按对方框架重写 · 最终通过<br>内容效率提升 80%</p>
+          </div>
+          <div class="skill-col">
+            <div class="skill-col-label">机器人售前迁移</div>
+            <p>合作伙伴培训体系<br>→ 直接对应 JD 第4条<br>海外严苛验收经验 · 已踩过这个坑</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">技术文档与内容输出</div>
+        <div class="skill-body">
+          <div class="skill-col">
+            <div class="skill-col-label">过去做过</div>
+            <p>独立完成全英文操作手册 · 技术白皮书 · 培训教材<br>覆盖 SaaS 平台/设备/API 全套</p>
+          </div>
+          <div class="skill-col">
+            <div class="skill-col-label">机器人售前迁移</div>
+            <p>开发者文档 · Quick Start<br>→ 同类工作<br>多语言输出 · 覆盖欧美日市场</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head">客户声音 → 产品决策</div>
+        <div class="skill-body">
+          <div class="skill-col">
+            <div class="skill-col-label">过去做过</div>
+            <p>海外需求结构化 · 产品优先级输入<br>A/B 测试验证 · NPS 提升 59%</p>
+          </div>
+          <div class="skill-col">
+            <div class="skill-col-label">机器人售前迁移</div>
+            <p>开发者问题反馈闭环<br>→ 用数据说服研发<br>不只是传话，是产品判断</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section id="contact" class="foot">
+  <div class="sec-inner" style="max-width:520px">
+    <h2>吴翩翩</h2>
+    <p class="foot-sub">
+      我在星星充电四年，把复杂的硬件+SaaS 系统卖给了新加坡、香港的海外 ToB 客户。
+      被退回过材料，遇到过现场数据对不上、客户当场质疑的时刻，也从零搭建过渠道培训体系。<br><br>
+      核心能力只有一条：<strong style="color:var(--t)">把技术翻译成客户能做决策的语言，把客户的问题翻译成团队能行动的输入。</strong>
+    </p>
+    <div class="foot-contact">19357209807 · wupianpian2017@gmail.com · 北京</div>
+    <div class="foot-btns">
+      <a href="吴翩翩_Booster海外售前方案框架v6.pdf" download class="btn btn-dark">↓ 下载完整方案 PDF</a>
+    </div>
+  </div>
+</section>
+
+<script>
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})
+},{threshold:.08,rootMargin:'0px 0px -32px 0px'})
+document.querySelectorAll('.fu').forEach((el,i)=>{
+  el.style.transitionDelay=`${(i%4)*0.07}s`
+  io.observe(el)
+})
+</script>
+</body>
+</html>
